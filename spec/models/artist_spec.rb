@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Artist do
+  it { should have_many(:artworks) }
+  
   let(:blanks){[nil, '']}
 
   it { should have_valid(:name).when('Keith', 'Kevin', 'Faizaan Super') }
